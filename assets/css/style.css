@@ -1,0 +1,30 @@
+:root {
+    --dark-blue: #1B263D;
+    --navy-blue: #03045e;
+    --royal-blue: #0074B7;
+    --blue-grotto: #60A3D9;
+    --white: #FFFFFF;
+}
+
+.custom-header {
+    background: linear-gradient(90deg, var(--royal-blue), var(--navy-blue), var(--dark-blue));
+}
+
+.custom-submit{
+    margin: 5px 0;
+    background-color: var(--blue-grotto);
+    color: var(--white);
+    border: 0px;
+}
+.custom-btn {
+    margin: 1px 0; 
+    padding: 2px;
+    background-color: gray;
+    color: var(--white);
+    border: 0px;
+}
+
+.custom-card {
+    background-color: var(--dark-blue);
+    color: var(--white)
+}
