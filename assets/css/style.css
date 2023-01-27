@@ -1,5 +1,5 @@
 :root {
-    --dark-blue: #1B263D;
+    --dark-blue: #9fa5b2;
     --navy-blue: #03045e;
     --royal-blue: #0074B7;
     --blue-grotto: #60A3D9;
@@ -16,12 +16,13 @@
     color: var(--white);
     border: 0px;
 }
-.custom-btn {
+.custom-li {
     margin: 1px 0; 
     padding: 2px;
     background-color: gray;
     color: var(--white);
     border: 0px;
+    list-style: none;
 }
 
 .custom-card {
