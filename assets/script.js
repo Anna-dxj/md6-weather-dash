@@ -1,9 +1,11 @@
 const submitBtn = document.querySelector('#submit-btn');
 const cityNameDateEl = document.querySelector('#city-display');
 const warningCard = document.querySelector('#warning-card');
-const errorCard = document.querySelector('#error-card')
+const errorCard = document.querySelector('#error-card');
 const weatherDiv = document.querySelector('#weather-card');
 const prevSearchDiv = document.querySelector("#prev-search");
+const formDiv = document.querySelector('#form-div');
+const formContainer = document.querySelector('f')
 
 const nowIconEl = document.querySelector('#now-icon');
 const nowWeather = document.querySelector('#now-weather');
@@ -117,11 +119,14 @@ const storeCity = (name, lat, lon) => {
     if (storedCityData) {
         storedData = JSON.parse(storedCityData);
     }
-    storedData.push(cityData);
-    const updatedStoredData = JSON.stringify(storedData);
+    const filteredStoredData = storedData.filter((data) => {
+        return !(data.lat === lat && data.lon === lon)
+    })
+    filteredStoredData.push(cityData);
+    const updatedStoredData = JSON.stringify(filteredStoredData);
+    
     localStorage.setItem('cityData', updatedStoredData);
 
-    const newCityData = localStorage.getItem('cityData');
     renderNewBtn(name, lat, lon);
 }
 
@@ -139,6 +144,9 @@ const renderNewBtn = (name, lat, lon) => {
 
 const renderBtns = () => {
     const storedCityData = localStorage.getItem('cityData');
+    if (!storedCityData) {
+        return;
+    }
     const cityData = JSON.parse(storedCityData);
     const filteredCityData = cityData.filter((item, index, arr) => {
         return arr.findIndex((obj) => obj.lat === item.lat && obj.lon === item.lon) === index
