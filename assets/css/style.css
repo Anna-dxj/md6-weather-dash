@@ -1,9 +1,14 @@
 :root {
     --dark-blue: #9fa5b2;
+    --dark-blue-faded: #9fa5b2a6;
     --navy-blue: #03045e;
     --royal-blue: #0074B7;
     --blue-grotto: #60A3D9;
     --white: #FFFFFF;
+    --warning: #ff0000b8;
+}
+.hidden {
+    display: none;
 }
 
 .custom-header {
@@ -15,17 +20,88 @@
     background-color: var(--blue-grotto);
     color: var(--white);
     border: 0px;
+    transition: background-color 0.7s ease-in-out;
+    border-radius: 0.25rem;
 }
-.custom-li {
+
+.custom-submit:hover {
+    background-color: var(--royal-blue);
+}
+
+#city-name {
+    border: 2px solid var(--dark-blue-faded);
+    border-radius: 0.25rem;
+}
+
+.history-btn {
     margin: 1px 0; 
     padding: 2px;
     background-color: gray;
     color: var(--white);
     border: 0px;
-    list-style: none;
+    border-radius: 0.25rem;
+    transition: background-color 0.7s ease-in-out;
 }
 
+.history-btn:hover {
+    background-color: var(--royal-blue);
+}
+
+.warning-card {
+    background-color: var(--warning);
+    color: var(--white);
+    font-weight: 500;
+    padding: 0.25rem;
+    border-color: transparent;
+    box-shadow: 10px 10px 55px 1px rgba(0,0,0,0.28);
+}
 .custom-card {
     background-color: var(--dark-blue);
-    color: var(--white)
+    color: var(--white);
+    margin: 0.25rem;
+    padding: 0.25rem;
+    border-color: transparent;
+    box-shadow: 10px 10px 55px 1px rgba(0,0,0,0.18);
+    transition: all 0.7s ease-in-out;
+}
+
+.key {
+    font-weight: 600;
+    color: white; 
+    transition: color 0.7s ease-in-out
+}
+
+
+.custom-card:hover {
+    color: black;
+    background-color: transparent;
+    box-shadow: 10px 10px 55px 9px rgba(0,0,0,0.5);
+}
+.custom-card:hover .key{
+    color: var(--royal-blue);
+}
+.custom-card:hover h3, 
+.custom-card:hover h5, p >.span {
+    color: var(--royal-blue);
+}
+
+h3, h5 {
+    color: white;
+    transition: all 0.7s ease-in-out;
+}
+h4 {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    color: var(--navy-blue)
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    margin-left: -4px;
+    padding: 0;
 }

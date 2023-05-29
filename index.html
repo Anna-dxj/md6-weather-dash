@@ -23,55 +23,92 @@
         <div id="prev-search" class="col-5">
         </div>
         <div class="col-auto flex">
-            <div id="current-weather" class="card">
-                <h1 id="city-display"></h1>
-                <img id="now-icon" width="5%">
-                <p id="now-temp">Temp: </p>
-                <p id="now-wind">Wind speed: </p>
-                <p id="now-humidity">Humidity: </p>
-                <p id="now-feels">Feels Like: </p>
+            <div id="warning-card" class="hidden">
+                <p>Search a city to get the weather!</p>
             </div>
-            <div id="future-forecast" class="row justify-content-around">
-                <h3 class="justify-content-start">5-Day Forecast:</h3>
-                <div id="day1" class="card custom-card col-2">
-                    <h4 id="d1-date"></h4>
-                    <img id="d1-icon" width="25%"/>
-                    <p id="d1-temp"></p>
-                    <p id="d1-wind"></p>
-                    <p id="d1-humid"></p>
-                    <p id="d1-feels"></p>
+            <div id="error-card" class="hidden">
+                <p>Oh no, something went wrong!</p>
+            </div>
+            <div id="weather-card" class="hidden">
+                <div id="current-weather" class="custom-card card container-fluid px-3 py-2 mt-2 mb-1">
+                    <h3 id="city-display"></h3>
+                    <div class="d-flex align-items-center mx-0">
+                        <img id="now-icon" width="4%" class=""/>
+                        <p id="now-weather" class=""></p>
+                    </div>
+                    <p id="now-weather"></p>
+                    <p id="now-temp">Temp: </p>
+                    <p id="now-wind">Wind speed: </p>
+                    <p id="now-humidity">Humidity: </p>
+                    <p id="now-feels">Feels Like: </p>
                 </div>
-                <div id="day2" class="card custom-card col-2">
-                    <h4 id="d2-date"></h4>
-                    <img id="d2-icon" width="25%">
-                    <p id="d2-temp"></p>
-                    <p id="d2-wind"></p>
-                    <p id="d2-humid"></p>
-                    <p id="d2-feels"></p>
-                </div>
-                <div id="day3" class="card custom-card col-2">
-                    <h4 id="d3-date"></h4>
-                    <img id="d3-icon" width="25%">
-                    <p id="d3-temp"></p>
-                    <p id="d3-wind"></p>
-                    <p id="d3-humid"></p>
-                    <p id="d3-feels"></p>
-                </div>
-                <div id="day4" class="card custom-card col-2">
-                    <h4 id="d4-date"></h4>
-                    <img id="d4-icon" width="25%">
-                    <p id="d4-temp"></p>
-                    <p id="d4-wind"></p>
-                    <p id="d4-humid"></p>
-                    <p id="d4-feels"></p>
-                </div>
-                <div id="day5" class="card custom-card col-2">
-                    <h4 id="d5-date"></h4>
-                    <img id="d5-icon" width="25%">
-                    <p id="d5-temp"></p>
-                    <p id="d5-wind"></p>
-                    <p id="d5-humid"></p>
-                    <p id="d5-feels"></p>
+                <div id="future-forecast" class="row justify-content-around mt-1">
+                    <h4 class="justify-content-start px-3 py-2 m-2">5-Day Forecast:</h4>
+                    <div id="day1" class="card custom-card col-md-2 col-sm-5 container px-3 py-2">
+                        <h5 id="d1-date"></h5>
+                        <div class="d-flex align-items-center">
+                            <img id="d1-icon" width="15%"/>
+                            <p id="d1-weather"></p>
+                        </div>
+                        <div class="row">
+                            <p id="d1-max" class="col-sm-5 col-md-12"></p>
+                            <p id="d1-min" class="col-sm-5 col-md-12"></p>
+                        </div>
+                        <p id="d1-wind"></p>
+                        <p id="d1-humid"></p>
+                    </div>
+                    <div id="day2" class="card custom-card col-md-2 col-sm-5 container px-3 py-2">
+                        <h5 id="d2-date"></h5>
+                        <div class="d-flex align-items-center">
+                            <img id="d2-icon" width="15%"/>
+                            <p id="d2-weather"></p>
+                        </div>
+                        <div class="row">
+                            <p id="d2-max" class="col-sm-5 col-md-12"></p>
+                            <p id="d2-min" class="col-sm-5 col-md-12"></p>
+                        </div>
+                        <p id="d2-wind"></p>
+                        <p id="d2-humid"></p>
+                    </div>
+                    <div id="day3" class="card custom-card col-md-2 col-sm-5 container px-3 py-2">
+                        <h5 id="d3-date"></h5>
+                        <div class="d-flex align-items-center">
+                            <img id="d3-icon" width="15%"/>
+                            <p id="d3-weather"></p>
+                        </div>
+                        <div class="row">
+                            <p id="d3-max" class="col-sm-5 col-md-12"></p>
+                            <p id="d3-min" class="col-sm-5 col-md-12"></p>
+                        </div>
+                        <p id="d3-wind"></p>
+                        <p id="d3-humid"></p>
+                    </div>
+                    <div id="day4" class="card custom-card col-md-2 col-sm-5 container px-3 py-2">
+                        <h5 id="d4-date"></h5>
+                        <div class="d-flex align-items-center">
+                            <img id="d4-icon" width="15%"/>
+                            <p id="d4-weather"></p>
+                        </div>
+                        <div class="row">
+                            <p id="d4-max" class="col-sm-5 col-md-12"></p>
+                            <p id="d4-min" class="col-sm-5 col-md-12"></p>
+                        </div>
+                        <p id="d4-wind"></p>
+                        <p id="d4-humid"></p>
+                    </div>
+                    <div id="day5" class="card custom-card col-md-2 col-sm-5 container px-3 py-2">
+                        <h5 id="d5-date"></h5>
+                        <div class="d-flex align-items-center">
+                            <img id="d5-icon" width="15%"/>
+                            <p id="d5-weather"></p>
+                        </div>
+                        <div class="row">
+                            <p id="d5-max" class="col-sm-5 col-md-12"></p>
+                            <p id="d5-min" class="col-sm-5 col-md-12"></p>
+                        </div>
+                        <p id="d5-wind"></p>
+                        <p id="d5-humid"></p>
+                    </div>
                 </div>
             </div>
         </div>
