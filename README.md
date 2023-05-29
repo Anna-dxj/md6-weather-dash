@@ -1,8 +1,8 @@
-# md6-weather-dash
+# Weather Dashboard [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
 
 ## Description 
 
-This webpage uses JavaScript and [OpenWeather's Weather API](https://openweathermap.org/api) to allow a user to search for a city and see the current weather and time, as well as a 5-day forecast. Upon going to the application's URL, the user will be presented with the following page: ![Screenshot-empty-page](assets/images/empty.png)
+This webpage uses JavaScript, [OpenWeather's Weather API](https://openweathermap.org/api), [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/), [Dayjs](https://day.js.org/docs/en/installation/installation), and Local Storage to allow a user to search for a city and see the current weather and time, as well as a 5-day forecast. Upon going to the [application's URL](https://anna-dxj.github.io/md6-weather-dash/), the user will be presented with the following page: ![Screenshot-empty-page](assets/images/empty.png)
 
 Upon searching for a city, the aforementioned components will be displayed, and a button for a quick search will be displayed: ![Screenshot-search-example](assets/images/search.png)
 
@@ -11,16 +11,17 @@ By finishing this project, I was able to become more comfortable using a server-
 ---
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+  - [Installation](#instlalation)
+  - [Usage](#usage)
+  - [License](#license) 
+  - [Contributing](#contributing)
+  - [Tests](#tests)
 
 ---
 
 ## Installation
 
-N/A
+There are no installation instructions to continue development or to use this application. 
 
 ## Usage
 
@@ -30,15 +31,11 @@ To navigate to this webpage, please [click here](https://anna-dxj.github.io/md6-
 
 To access Chrome DevTools, access the webpage from Google Chrome and press Command+Option+I (MacOS) or Control+Shift+I (Windows). A console will appear on teh webpage, and you may inspect the structure of the webpage through the console. 
 
-## Credits
-
-N/A
-
 ## License
 
-MIT License
+  [License: MIT](https://opensource.org/licenses/MIT)
 
-Copyright (c) [2023] [Anna Langford]
+  Copyright 2023 Anna Langford
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -57,3 +54,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Contributing
+
+No other developers contributed to this applicaiton.
+
+ChatGPT was consulted regarding some bugs (particularly regarding setting items to local storage). 
+
+## Tests
+This application has no tests.
