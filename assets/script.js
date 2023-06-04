@@ -21,7 +21,7 @@ const now = dayjs().format('D MMM YYYY HH:m');
 
 const fetchGeoEncoding = async (cityName) => {
     try {
-        const geocodingApiURl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${apiKey}`
+        const geocodingApiURl = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${apiKey}`
         const response = await fetch(geocodingApiURl);
         if (!response.ok) {
             console.error(`Geocoding error:`, response.status)
@@ -58,7 +58,7 @@ const fetchWeatherNow = async (lat, lon) => {
 
 
         cityNameDateEl.textContent = `${name} at ${now}`;
-        nowIconEl.setAttribute('src', `http://openweathermap.org/img/w/${icon}.png`);
+        nowIconEl.setAttribute('src', `https://openweathermap.org/img/w/${icon}.png`);
         nowIconEl.setAttribute('alt', description);
         nowWeather.textContent=description;
         nowTempEl.innerHTML = `<p><span class="key">Temp</span>: ${temp}°F </p>`;
